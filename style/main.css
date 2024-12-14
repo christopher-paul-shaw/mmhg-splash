@@ -1,0 +1,24 @@
+.logo {
+  width: 500px;
+  max-width: 90%;
+}
+
+body {
+  margin: 0;
+}
+nav {
+  border-bottom: 2px solid #efefef;
+  margin: 0px 0px 10px 0px;
+}
+
+.section:nth-child(odd) {
+    background: #efefef;
+}
+
+.box {
+  width: 800px;
+  max-width: 90%;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
