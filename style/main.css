@@ -70,7 +70,7 @@ nav ul li:nth-child(0) {
     padding-bottom: 40px;
 }
 
-.section:nth-child(even) {
+.section:nth-child(odd) {
     background: #f8f8f8;
 
 }
