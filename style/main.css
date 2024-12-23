@@ -123,10 +123,8 @@ h2 {
   font-size: 20pt;
 }
 
-// Mobile Tweaks
 @media screen and (max-width: 750px) { 
  nav ul li {
     padding: 8px;
   }    
 }
-
