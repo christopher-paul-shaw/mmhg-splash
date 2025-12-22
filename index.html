@@ -29,17 +29,35 @@
 
 <body>
 
-  <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Mens Mental Health Group</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="#events" class="hover:text-blue-600">Events</a></li>
-        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- Logo / Title -->
+    <h1 class="text-xl font-bold">Mens Mental Health Group</h1>
+
+    <!-- Hamburger Button (Mobile Only) -->
+    <button id="nav-toggle" class="md:hidden text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- Navigation Links -->
+    <ul id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+      <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+      <li><a href="#about" class="hover:text-blue-600">About</a></li>
+      <li><a href="#events" class="hover:text-blue-600">Events</a></li>
+      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <ul id="nav-mobile" class="md:hidden hidden flex-col bg-white shadow-lg px-6 py-4 space-y-4 text-lg">
+    <li><a href="#home" class="block hover:text-blue-600">Home</a></li>
+    <li><a href="#about" class="block hover:text-blue-600">About</a></li>
+    <li><a href="#events" class="block hover:text-blue-600">Events</a></li>
+    <li><a href="#contact" class="block hover:text-blue-600">Contact</a></li>
+  </ul>
+</nav>
+
   <section id="home" class="h-screen bg-white flex items-center justify-center fade-section">
     <div class="max-w-4xl mx-auto px-4 text-center"> <img src="/images/master-logo.jpeg" alt="Mens Mental Health Group Logo" class="mx-auto mb-6"
   style="min-width: 500px; max-width: 98%; max-height: 98%; height: auto;"/> </div>
@@ -129,6 +147,15 @@
     );
     sections.forEach((section) => observer.observe(section));
   </script>
+  <script>
+  const toggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('nav-mobile');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 
 </body>
 
